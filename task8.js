@@ -1,64 +1,31 @@
 
-//now add an edit button 
-var form = document.getElementById('addForm');
-var itemList = document.getElementById('items');
+        function saveToLocalStorage(event) {
+            event.preventDefault();
+            const name = event.target.name.value;
+            const email = event.target.email.value;
+            const phonenumber = event.target.phonenumber.value;
+
+            if(name===''|| !email==='' || !phonenumber==='') {
+                alert("Please enter valid data in all fields");
+                return;
+            } else {
+              console.log('login succeseful');
+            }
+
+            const obj = {
+                name,
+                email,
+                phonenumber
+           
+            }
+            localStorage.setItem(email, JSON.stringify(obj));
+            showUserOnScreen(obj)
+        }
+        function showUserOnScreen(obj){
+            const parentElem = document.getElementById('listOfitems');
+            parentElem.innerHTML = parentElem.innerHTML+ `<li>${obj.name} - ${obj.email} - ${obj.phonenumber}</li>`
+        }
+      
+   
 
 
-// Form submit event
-form.addEventListener('submit', addItem);
-// Delete event
-itemList.addEventListener('click', removeItem);
-// Filter event
-filter.addEventListener('keyup', filterItems);
-
-// Add item
-function addItem(e){
-  e.preventDefault();
-
-  // Get input value
-  var newItem = document.getElementById('item').value;
-
-  // Create new li element
-  var li = document.createElement('li');
-  // Add class
-  li.className = 'list-group-item';
-  // Add text node with input value
-  li.appendChild(document.createTextNode(newItem));
-
-  // Create del button element
-  var deleteBtn = document.createElement('button');
-
-  // Add classes to del button
-  deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
-
-  // Append text node
-  deleteBtn.appendChild(document.createTextNode('X'));
-
-  // Append button to li
-  li.appendChild(deleteBtn);
-
-  // Append li to list
-  itemList.appendChild(li);
-}
-
-// Remove item
-function removeItem(e){
-  if(e.target.classList.contains('delete')){
-    if(confirm('Are You Sure?')){
-      var li = e.target.parentElement;
-      itemList.removeChild(li);
-    }
-  }
-}
-
-function Edit(button) {
-    const x = document.querySelector('btn btn-danger btn-sm float-right delete');
-    if (x.contentEditable == "true") {
-       x.contentEditable = "false";
-       button.innerHTML = 'Edit';
-    } else {
-       x.contentEditable = "true";
-       button.innerHTML = 'Save';
-    }
- 
- }
