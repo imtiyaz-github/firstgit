@@ -1,85 +1,15 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
 
-}
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    background-color: black;
+    background-color: aliceblue;
+    padding: 10% ;
+
 }
 
-.container {
-    max-width: 50em;
-    margin: 2rem  auto;
-    padding: 0px 2rem;
-    border: 1px solid;
-}
-.main-heading {
-    font-size: 4em;
-    margin: 2rem 0rem auto;
-    border: 1px solid;
-    color:white;
+.button {
+    color: black;
+    padding: auto;
+    background-attachment: fixed;
     text-align: center;
-}
-
-/* form section */
-.form-class {
-    margin: 2em opx;
-}
-.form-control {
-    display: flex;
-    flex-direction: column;
-}
-.field-head {
-    font-size: 2rem;
-
-
-}
-.input div {
-    margin-bottom: 1rem;
-}
-.field-inputs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-}
-
-.form-control-input {
-    font-size: 1.5rem;
-    padding: 0.4rem 0px;
-    text-indent: 0.5rem;
-    border: none;
-    outline: 1px solid #999;
-    border-radius: 7px;
-    width: 100%;
-    color: #999;
-}
-
-option {
-    color: #999;
-}
-
-.form-control-input:focus {
-    color: #212529;
-    background-color: #fff;
-border-color: #86be;
-outline: 0;
-box-shadow: 0 0 0  0 0.25rem rgb(red, green, blue);
-}
-
-
-button  {
-    font-size: 2rem;
-    margin: 0px auto;
-    display: block;
-    color: white;
-    padding: 0.5rem 0.8rem;
-    background-color: #023d;
-    border-radius: 10px;
-    box-shadow: 1px #0000;
-    box-shadow: rgb(100 100 111/20%);
+    text-emphasis-color: black;
 
 }

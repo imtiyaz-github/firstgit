@@ -1,23 +1,37 @@
 
 
 
+function test() {
+    var name =  document.getElementById('name').value;
+      var email = document.getElementById('email').value;
 
-var li  =  document.getElementsByTagName('li');
+       //storing the data value
 
+       var n  =  localStorage.setItem('name',name)
+       var e  =  localStorage.setItem('email',email)
 
-console.log(li);
-
-console.log(li[1]);
-console.log(document.getElementsByClassName("list-group-item"));
-
-console.log(document.getElementsByTagName('items'));
-console.log(document.getElementsByClassName('items are here'));
-
-li[1].textContent = 'hello2';
-li[1].style.fontWeight  ="bold";
-li[1].style.backgroundColor = 'pink';
+      //now crete a get item
 
 
-for(var  i =0;i<items.length;i++) {
-    items[i].style.backgroundColor = 'green';
+
+       var n  =  localStorage.getItem('name',name)
+       var e  =  localStorage.getItem('email',email)
+
+
+
+       console.log(n);
+       consolelog(e);
+   var  a,b,c;
+   a = 'imtiyaz';
+   b = "imtiyazshirasangi456@gmail.com";
+
+
+   if(a==n && b==e) {
+    alert('login successful !');
+   } else  {
+    alert('Invalid details !');
+
+ }
 }
+
+// console.log('hello world');
