@@ -1,32 +1,32 @@
 ///query selector
 
 var header = document.querySelector('#main-header');
-header.style.borderBottom = 'solid 4px #ccc';
+header.style.backgroundColor= 'solid 4px #ccc';
 
 
-var input =  document.querySelector('input');
-input.value  ="hello wrold"
+// var input =  document.querySelector('input');
+// input.value  ="hello wrold"
 
 
-var submit  = document.querySelector('input[type="submit"]');
-submit.value  ='send';
+// var submit  = document.querySelector('input[type="submit"]');
+// submit.value  ='send';
 
-var item  = document.querySelector('.list-group-item');
-item.style.color = 'red';
+// var item  = document.querySelector('.list-group-item');
+// item.style.color = 'red';
 
-var  lastitem = document.querySelector
-('.list-group-item:last-child');
-lastitem.style.color =  'blue';
+// var  lastitem = document.querySelector
+// ('.list-group-item:last-child');
+// lastitem.style.color =  'blue';
 
- var  seconditem = document.querySelector
-('.list-group-item:nth-child(2)');
-seconditem.style.backgroundColor = 'green';
-seconditem.style.fontColor = 'green';
+//  var  seconditem = document.querySelector
+// ('.list-group-item:nth-child(2)');
+// seconditem.style.backgroundColor = 'green';
+// seconditem.style.fontColor = 'green';
 
 
-var thirditem  = document.querySelector
-('.list-group-item:nth-child(3)');
-thirditem.style.visibility = 'hidden';
+// var thirditem  = document.querySelector
+// ('.list-group-item:nth-child(3)');
+// thirditem.style.visibility = 'hidden';
 
 //we can use this also 
 //document.querySelector('.list-group-item:nth-child(3)').style.visibility = 'hidden'
